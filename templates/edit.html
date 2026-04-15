@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Question</title>
+<link rel="stylesheet" href="/static/style.css">
+
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="box">
+
+<h2>✏️ Edit Question</h2>
+
+<form method="post">
+
+<p><b>Subject:</b> {{ q.subject }}</p>
+<p><b>Type:</b> {{ q.type }}</p>
+
+<textarea name="question" required>{{ q.question }}</textarea>
+
+<input name="o1" value="{{ q.option1 }}" required>
+<input name="o2" value="{{ q.option2 }}" required>
+<input name="o3" value="{{ q.option3 }}" required>
+<input name="o4" value="{{ q.option4 }}" required>
+
+<input name="correct" value="{{ q.correct }}" required>
+
+<button type="submit">💾 Update</button>
+
+</form>
+
+<br>
+
+<a href="/admin">
+    <button>🔙 Back</button>
+</a>
+
+</div>
+
+</body>
+</html>
