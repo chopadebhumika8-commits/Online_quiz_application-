@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="box">
+<h2>🎉 Welcome {{ session['user'] }}</h2>
+<p>🚀 Ready to test your knowledge?</p>
+
+<a href="/select_class"><button>🎯 Start Quiz</button></a>
+<a href="/profile"><button>👤 Profile</button></a>
+<a href="/leaderboard"><button>🏆 Leaderboard</button></a>
+<a href="/admin_login"><button>⚙️ Admin Panel</button></a>
+<a href="/logout"><button>🚪 Logout</button></a>
+
+</div>
+
+</body>
+</html>
