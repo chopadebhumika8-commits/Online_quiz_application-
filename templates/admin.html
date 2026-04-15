@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="/static/style.css">
+
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="box">
+
+<h2>⚙️ Admin Panel</h2>
+
+<!-- ADD QUESTION -->
+<form method="post">
+
+<select name="subject" required>
+    <option value="DS">Data Structure</option>
+    <option value="PY">Python</option>
+</select>
+
+<select name="type" required>
+    <option value="simple">Simple</option>
+    <option value="advanced">Advanced</option>
+</select>
+
+<input name="question" placeholder="Question" required>
+<input name="o1" placeholder="Option 1" required>
+<input name="o2" placeholder="Option 2" required>
+<input name="o3" placeholder="Option 3" required>
+<input name="o4" placeholder="Option 4" required>
+<input name="correct" placeholder="Correct Answer" required>
+
+<button type="submit">➕ Add Question</button>
+
+</form>
+
+<hr>
+
+<h3>📋 Questions</h3>
+
+{% for q in questions %}
+
+<div style="text-align:left; margin-bottom:10px;">
+<p><b>{{ q.question }}</b></p>
+
+<a href="/edit/{{ q.id }}">
+    <button>✏️ Edit</button>
+</a>
+
+<a href="/delete/{{ q.id }}" onclick="return confirm('Delete?')">
+    <button>🗑 Delete</button>
+</a>
+
+</div>
+
+<hr>
+
+{% endfor %}
+
+<br>
+
+<a href="/dashboard">
+    <button>🔙 Back</button>
+</a>
+
+<a href="/admin_logout">
+    <button>🚪 Admin Logout</button>
+</a>
+
+</div>
+
+</body>
+</html>
