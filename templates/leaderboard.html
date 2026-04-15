@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaderboard</title>
+<link rel="stylesheet" href="/static/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="box">
+<h2>🏆 Leaderboard</h2>
+
+{% for u in users %}
+<p>{{ loop.index }}. {{ u.username }} - {{ u.best_score }}</p>
+{% endfor %}
+
+<a href="/dashboard"><button>🔙 Back</button></a>
+
+</div>
+
+</body>
+</html>
